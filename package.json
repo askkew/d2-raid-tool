@@ -9,10 +9,15 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@klarna/react-native-vector-drawable": "^0.4.0",
+    "dotenv": "^16.3.1",
     "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.71.8",
+    "react-native-svg": "^13.9.0",
+    "react-native-vector-icons": "^9.2.0",
+    "react-native-vector-image": "^0.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
