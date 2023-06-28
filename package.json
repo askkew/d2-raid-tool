@@ -15,15 +15,16 @@
     "expo-auth-session": "~4.0.3",
     "expo-crypto": "~12.2.1",
     "expo-status-bar": "~1.4.4",
+    "expo-updates": "~0.16.4",
+    "expo-web-browser": "~12.1.1",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-dotenv": "^3.4.9",
     "react-native-inappbrowser-reborn": "^3.7.0",
     "react-native-svg": "^13.9.0",
     "react-native-vector-icons": "^9.2.0",
     "react-native-vector-image": "^0.4.3",
-    "react-native-webview": "^13.2.2",
-    "expo-web-browser": "~12.1.1",
-    "expo-updates": "~0.16.4"
+    "react-native-webview": "^13.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

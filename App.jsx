@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, ActivityIndicator } from 'react-native';
 import { backgroundColor } from './components/constants';
 import { useState, useEffect } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -10,10 +10,29 @@ import Loginpage from './components/loginpage';
 import Inventorypage from './components/inventorypage';
 
 export default function App() {
+  const [mainLoading, setMainLoading] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMainLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <View style={styles.container}>
-      {loggedIn ? <Inventorypage /> : <Loginpage />}
+      {mainLoading ? (
+        <View style={styles.container}>
+          <Text style={styles.text}>Welcome to D2 Raid Tool!</Text>
+          <Image
+            style={styles.tinyLogo}
+            source={require('./assets/d2raidtooliconprimarywhite.png')}
+          />
+          <ActivityIndicator size="large" color="#fff" />
+        </View>
+      ) : (
+        loggedIn ? <Inventorypage /> : <Loginpage />
+      )}
       <StatusBar style="auto" />
     </View>
   );
@@ -27,7 +46,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: '#fff'
+    color: '#fff',
+    fontSize: 25,
+  },
+  tinyLogo: {
+    height: 250,
+    width: 250,
   },
 });
 
