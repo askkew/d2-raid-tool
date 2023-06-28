@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
 });
 
 const Inventorypage = () => {
+
   return (
     <View style={styles.container}>
       <View style={styles.imagecontainer}>
@@ -54,10 +55,10 @@ const Inventorypage = () => {
       </View>
       <View style={styles.imagecontainer}>
         <Vault.Button style={styles.button} name="bank" size={30} color="white" backgroundColor="rgb(31,34,39)">
-          <Text style={styles.text}>Vault</Text>
+          Vault
         </Vault.Button>
         <Mail.Button style={styles.button} name="post" size={30} color="white" backgroundColor="rgb(31,34,39)">
-          <Text style={styles.text}>Postmaster</Text>
+          Postmaster
         </Mail.Button>
       </View>
       <Text style={styles.text}>

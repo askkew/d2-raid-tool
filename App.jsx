@@ -1,15 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { backgroundColor } from './components/constants';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
+import InAppBrowser from 'react-native-inappbrowser-reborn';
 import Loginpage from './components/loginpage';
 import Inventorypage from './components/inventorypage';
 
 export default function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <View style={styles.container}>
       {loggedIn ? <Inventorypage /> : <Loginpage />}
