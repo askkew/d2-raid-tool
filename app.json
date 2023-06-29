@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "d2raidtool",
     "name": "d2-raid-tool",
     "slug": "d2-raid-tool",
     "version": "1.0.0",

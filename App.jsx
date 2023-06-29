@@ -11,7 +11,7 @@ import Inventorypage from './components/inventorypage';
 
 export default function App() {
   const [mainLoading, setMainLoading] = useState(true);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setMainLoading(false);
